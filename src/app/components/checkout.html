@@ -1,2 +1,7 @@
 <h2>Checkout!</h2>
-List items in cart here
+<div ng-repeat="item in items">
+	<img ng-src="{{item.img}}" />
+	<span>{{item.name}}</span>
+	<span>{{item.price | currency}}</span>
+	<button class="btn btn-danger" ng-click="$ctrl.removeFromCart(item)">Remove</button>
+</div>
