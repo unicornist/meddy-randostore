@@ -9,7 +9,13 @@ module.exports = function () {
       ],
       routes: {
         '/bower_components': 'bower_components'
-      }
+      },
+      middleware: [
+        require('http-proxy-middleware')('/api', {
+          target: 'http://localhost:3000',
+          changeOrigin: true
+        })
+      ]
     },
     open: false
   };
