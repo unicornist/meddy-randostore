@@ -8,8 +8,21 @@ function routesConfig($stateProvider, $urlRouterProvider, $locationProvider) {
   $urlRouterProvider.otherwise('/');
 
   $stateProvider
-    .state('app', {
+    .state('site', {
+      abstract: true,
+      component: 'site'
+    })
+    .state('site.items', {
       url: '/',
-      component: 'app'
-    });
+      component: 'items'
+    })
+    .state('site.addItem', {
+      url: '/add-item',
+      component: 'addItems'
+    })
+    .state('site.checkout', {
+      url: '/checkout',
+      component: 'checkout'
+    })
+    ;
 }
