@@ -1,2 +1,7 @@
 <h2>Browse Our Items at RandoStore</h2>
-List items here
+<div ng-repeat="item in items">
+	<img ng-src="{{item.img}}" />
+	<span>{{item.name}}</span>
+	<span>{{item.price | currency}}</span>
+	<button class="btn btn-success" ng-click="addToCart(item)">Add to Cart</button>
+</div>
