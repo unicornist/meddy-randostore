@@ -1,0 +1,7 @@
+{
+	"folders": [{
+		"path": "./",
+		"folder_exclude_patterns": ["node_modules", "bower_components", ".tmp", "dist", "build", ".svn", ".git", ".hg", "CVS"],
+		"file_exclude_patterns": ["*.pyc", "*.pyo", "*.exe", "*.dll", "*.obj","*.o", "*.a", "*.lib", "*.so", "*.dylib", "*.ncb", "*.sdf", "*.suo", "*.pdb", "*.idb", ".DS_Store", "*.class", "*.psd", "*.db", "*.sublime-project", "*.sublime-workspace", "package-lock.json", ".gitignore", ".gitattributes", ".editorconfig", ".yo-rc.json"]
+	}]
+}
