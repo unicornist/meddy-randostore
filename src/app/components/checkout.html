@@ -1,7 +1,23 @@
 <h2>Checkout!</h2>
-<div ng-repeat="item in items">
-	<img ng-src="{{item.img}}" />
-	<span>{{item.name}}</span>
-	<span>{{item.price | currency}}</span>
-	<button class="btn btn-danger" ng-click="$ctrl.removeFromCart(item)">Remove</button>
-</div>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col-1">Item</th>
+      <th scope="col"></th>
+      <th scope="col">Price</th>
+      <th scope="col">Quantity</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="item in items">
+      <th scope="row">{{$index+1}}</th>
+      <td width="100"><img ng-src="{{item.img}}" class="img-thumbnail" /></td>
+      <td><span>{{item.name}}</span></td>
+      <td><span>{{item.price | currency}}</span></td>
+      <td>{{item.count || 1 }}</td>
+      <td><button class="btn btn-outline-danger" ng-click="$ctrl.removeFromCart(item)">Remove</button></td>
+    </tr>
+  </tbody>
+</table>
