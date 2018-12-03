@@ -1,8 +1,12 @@
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+  <h1 class="my-0 mr-md-auto">RandoStore</h1>
+  <nav class="my-2 my-md-0 mr-md-3">
+    <a class="p-2 text-dark" ui-sref="site.addItem">Sell</a>
+    <a class="active p-2 text-dark" ui-sref="site.items">Buy</a>
+  </nav>
+  <a class="btn btn-outline-primary" ui-sref="site.checkout">
+  	Checkout <span class="badge badge-primary">{{$ctrl.getCartCount()}}</span>
+  </a>
+</div>
 <toast></toast>
-<h1>RandoStore Homepage</h1>
-<p>
-  <a ui-sref="site.addItem">Put Items up for Sale</a><br>
-  <a ui-sref="site.items">Browse our Items!</a><br>
-  <a ui-sref="site.checkout">Check out</a>
-</p>
-<div ui-view></div>
+<div class="container" ui-view></div>
